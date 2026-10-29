@@ -373,6 +373,7 @@ footer a:hover{color:var(--gold-2)}
 .topics li::before{content:"";position:absolute;left:0;top:16px;width:14px;height:8px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
 .topics li b{display:block;color:var(--navy)}.topics li span{color:var(--muted);font-size:.95rem}
 @media (max-width:760px){footer{padding-bottom:36px}}
+.form-err{display:none;color:#C0392B;font-weight:600;text-align:center;margin-top:10px}
 </style>
 </head>
 <body>
@@ -384,10 +385,10 @@ footer a:hover{color:var(--gold-2)}
       <h2>Projects don't fail. <em>The systems around them do.</em></h2>
       <p class="lead">Keynotes, panels and workshops on keeping control of projects across borders and industries — drawn from 20+ years in the field.</p>
       <ul class="topics">
-        <li><b>Keynote · No-Surprises Delivery</b><span>Why projects drift — and the five controls that keep them on track. 45–60 min.</span></li>
-        <li><b>Panels &amp; expert sessions</b><span>Project delivery, contracts, frontier markets, cross-border operations.</span></li>
-        <li><b>Workshops · half-day</b><span>Hands-on, with your team's own projects.</span></li>
-        <li><b>English or French</b><span>In person or virtual.</span></li>
+        <li><b>No-Surprises Delivery</b><span>Your reports look fine. Your site doesn't. Five fixes that close the gap — none of them another template.</span></li>
+        <li><b>Beyond Paperwork Governance</b><span>The plan in the deck is not the plan on site — and why the gap widens fastest in frontier markets.</span></li>
+        <li><b>Claims-Proof Delivery</b><span>Win the claim with the timeline that proves it — kept from day one.</span></li>
+        <li><b>Keynote · panel · workshop · virtual</b><span>In English or French, with a pre-brief and follow-up resources.</span></li>
       </ul>
     </div>
     <div>
@@ -403,6 +404,7 @@ footer a:hover{color:var(--gold-2)}
           <div class="field full"><label for="sv">Event or occasion <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="sv" name="event" placeholder="Name, date, city"></div>
         </div>
         <button class="btn btn-navy" type="submit">Get the speaker profile →</button>
+        <p class="form-err">Sorry — that didn\'t send. Please try again, or email <a href="mailto:hello@contracks.global">hello@contracks.global</a>.</p>
         <p class="privacy-note" style="font-size:.82rem;color:var(--muted);text-align:center;margin-top:12px">I'll use your details only to follow up on your request — see the <a href="/privacy" style="color:var(--navy)">privacy notice</a>.</p>
       </form>
       <div class="okbox" id="sok" hidden>
@@ -422,8 +424,8 @@ footer a:hover{color:var(--gold-2)}
 <script>document.getElementById('y').textContent=new Date().getFullYear();function wire(id,okId){var f=document.getElementById(id);if(!f)return;
 f.addEventListener('submit',function(e){e.preventDefault();
 fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-.then(function(){f.hidden=true;document.getElementById(okId).hidden=false;document.getElementById(okId).scrollIntoView({behavior:'smooth',block:'center'})})
-.catch(function(){f.submit()});});
+.then(function(r){if(!r.ok)throw new Error(r.status);f.hidden=true;document.getElementById(okId).hidden=false;document.getElementById(okId).scrollIntoView({behavior:'smooth',block:'center'})})
+.catch(function(){var e=f.querySelector('.form-err');if(e)e.style.display='block'});});
 if(location.search.indexOf('ok=1')>-1){f.hidden=true;document.getElementById(okId).hidden=false;}}wire('sf','sok');</script>
 </body>
 </html>
