@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serguei Poppeleer — Engineer, contract specialist, builder</title>
-<meta name="description" content="Serguei Poppeleer — engineer, contracts and operations. Crafting processes that help organisations adapt across borders and industries. Twenty years, thirty countries, four languages.">
+<title>Serguei Poppeleer | Engineer, Contracts & Project Delivery</title>
+<meta name="description" content="Serguei Poppeleer is an international engineer and contract specialist with 20+ years across construction, infrastructure, energy and operations in 30+ countries.">
+<link rel="canonical" href="https://serguei-poppeleer.netlify.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A1628">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Serguei Poppeleer">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Serguei Poppeleer | Engineer, Contracts & Project Delivery">
+<meta property="og:description" content="Serguei Poppeleer is an international engineer and contract specialist with 20+ years across construction, infrastructure, energy and operations in 30+ countries.">
+<meta property="og:url" content="https://serguei-poppeleer.netlify.app/">
 <meta property="og:image" content="https://serguei-poppeleer.netlify.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Serguei Poppeleer — Engineer, Contracts and Operations">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Serguei Poppeleer | Engineer, Contracts & Project Delivery">
+<meta name="twitter:description" content="Serguei Poppeleer is an international engineer and contract specialist with 20+ years across construction, infrastructure, energy and operations in 30+ countries.">
 <meta name="twitter:image" content="https://serguei-poppeleer.netlify.app/og.png">
-<meta property="og:url" content="https://serguei-poppeleer.netlify.app/">
-<meta property="og:title" content="Serguei Poppeleer — Engineer, contract specialist, builder">
-<meta property="og:description" content="Engineer · Contracts · Operations. 20+ years, 30+ countries.">
+<meta name="twitter:image:alt" content="Serguei Poppeleer — Engineer, Contracts and Operations">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -425,13 +434,38 @@ footer a:hover{color:var(--gold-2)}
 @media (max-width:1000px){.now{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.now{grid-template-columns:1fr}}
 .form-err{display:none;color:#C0392B;font-weight:600;text-align:center;margin-top:10px}
+#story .case-r{justify-content:center;gap:26px}
+.logo small{margin-top:5px;line-height:1.2}
+
+/* audit: a11y + robustness */
+:root{--green:#2D6A4F}
+:focus-visible{outline:3px solid #C5A050;outline-offset:4px;border-radius:6px}
+img{max-width:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (max-width:480px){.math-card,.card,.case-l,.case-r{overflow-wrap:anywhere}}
+button[disabled]{opacity:.6;cursor:wait}
+.cred-k{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.cred-k:first-of-type{margin-top:0}
+.jnav{display:none}
+@media (max-width:900px){.jnav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:10px}.jnav .swipe-hint{margin:0}}
+.jbtn{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-size:1.1rem;font-weight:700;cursor:pointer}
+.jbtn:hover{background:var(--gold-soft)}
+
+.journey-panel img{z-index:2}
+/* Designed location panels for journeys without supplied photographs */
+.journey-panel{display:flex;align-items:flex-end;padding:20px;background:radial-gradient(circle at 85% 18%,rgba(197,160,80,.28),transparent 42%),linear-gradient(135deg,#0F2D52,#0A1628);border:0}
+.journey-panel::before{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(212,180,112,.25);border-radius:50%;top:-85px;right:-35px;box-shadow:0 0 0 35px rgba(212,180,112,.04),0 0 0 70px rgba(212,180,112,.035)}
+.journey-panel-label{position:relative;z-index:1;color:#F7F0DF;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.2;text-wrap:balance}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","@id":"https://serguei-poppeleer.netlify.app/#person","name":"Serguei Poppeleer","url":"https://serguei-poppeleer.netlify.app/","image":"https://serguei-poppeleer.netlify.app/serguei-portrait.jpeg","jobTitle":"Engineer and Contract Specialist","description":"International engineer and contract specialist in construction contracts, project delivery and operations.","knowsAbout":["Civil engineering","Construction contract management","FIDIC","Project delivery","Infrastructure","Business operations"],"knowsLanguage":["en","fr","it","es"],"sameAs":["https://www.linkedin.com/in/serguei-poppeleer"]}
+</script>
 </head>
 <body>
 
 <nav class="top">
   <div class="wrap">
-    <a href="#" class="logo"><b>Serguei Poppeleer<span>.</span></b><small>Engineer · Builder · Negotiator</small></a>
+    <a href="#" class="logo"><b>Serguei Poppeleer<span>.</span></b><small>Engineer · Contracts · Operations</small></a>
     <div class="links" id="menu">
       <a href="#story">Story</a>
       <a href="#journey">Journey</a>
@@ -449,16 +483,17 @@ footer a:hover{color:var(--gold-2)}
     <div>
       <span class="pill">Engineer · Contracts · Operations</span>
       <h1>Serguei Poppeleer. <em>Calm on hard projects.</em></h1>
-      <p class="sub"><b style="color:var(--navy)">I craft the processes that help organisations adapt across borders and industries.</b> Twenty years where big projects meet hard reality taught me the work is never just concrete — it's people, promises and the paper that holds them together.</p>
+      <p class="sub"><b style="color:var(--navy)">I help organisations bring structure to complex projects, contracts and operations — across borders, industries and cultures.</b></p>
+      <p class="sub" style="margin-top:-14px">Over 20 years in more than 30 countries, I've learned that successful delivery depends on more than engineering. It depends on clear decisions, reliable systems and people who know what comes next.</p>
       <div class="hero-ctas">
         <a href="#story" class="btn btn-navy">Read my story →</a>
         <a href="speaker.html" class="btn btn-gold">Speaker profile →</a>
       </div>
-      <p class="hero-note">Working across <b>Europe, Africa, the Gulf and Asia</b></p>
       <p class="hero-note">Civil engineer by training · Contracts, claims and delivery by experience</p>
+      <p class="hero-note"><b>Europe · Africa · Gulf · Asia</b></p>
     </div>
     <div class="me-card">
-      <figure class="spot"><img src="serguei-hero.jpg" alt="Serguei Poppeleer" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · serguei-hero.jpg</span></figure>
+      <figure class="spot"><img src="serguei-hero.jpg" alt="Portrait of Serguei Poppeleer" loading="eager" fetchpriority="high" decoding="async" width="800" height="1000" onerror="this.onerror=null;this.src='serguei-portrait.jpeg'" ><span class="spot-l">Photo · serguei-portrait.jpeg</span></figure>
       <div class="me-stats">
         <div><strong>20+</strong><span>years</span></div>
         <div><strong>30+</strong><span>countries</span></div>
@@ -484,8 +519,9 @@ footer a:hover{color:var(--gold-2)}
         <p>So I went back to study the gaps — construction law and arbitration, contract and commercial management, then business and operations. Then I took that back to the field — on metros, power plants, pipelines, ports, hotels and retail developments. Today I still get the same quiet satisfaction from one thing: a hard project that finishes calmly.</p>
       </div>
       <div class="case-r">
-        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div><div><strong>The operations manager</strong><span>Sites and supply chains, run to one shared way of working.</span></div></div>
-        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div><div><strong>The team builder</strong><span>From teams of 10 engineers to 700-person site teams — and start-ups built from a blank page.</span></div></div>
+        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></div><div><strong>The CEO</strong><span>Interim, for start-ups raising investment, building their product or entering new markets.</span></div></div>
+        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div><div><strong>The operations manager</strong><span>Sites, teams and supply chains — run to one shared way of working, across borders.</span></div></div>
+        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div><div><strong>The team builder</strong><span>From teams of 10 engineers to 700-person site teams — and new ventures built from a blank page.</span></div></div>
       </div>
     </div>
   </div>
@@ -502,15 +538,21 @@ footer a:hover{color:var(--gold-2)}
     <div class="where-grid">
       <div class="card where">
         <h3>Trained in</h3>
+        <p class="cred-k">Degrees</p>
         <div class="chips">
           <span class="lang main">MSc Civil Engineering</span>
           <span class="lang main">LLM Construction Law &amp; Arbitration</span>
           <span class="lang main">MBA</span>
+        </div>
+        <p class="cred-k">Professional memberships &amp; certification</p>
+        <div class="chips">
           <span class="lang">MCIArb — Member, Chartered Institute of Arbitrators</span>
-          <span class="lang">WorldCC CCMP — Contract &amp; Commercial Management</span>
-          <span class="lang">CIOB</span>
-          <span class="lang">INSEAD</span>
-          <span class="lang">MIT</span>
+          <span class="lang">CIOB — Chartered Institute of Building</span>
+          <span class="lang">WorldCC CCMP — Contract &amp; Commercial Management Practitioner</span>
+        </div>
+        <p class="cred-k">Executive education</p>
+        <div class="chips">
+          <span class="lang">INSEAD</span><span class="lang">MIT</span>
         </div>
       </div>
       <div class="card where">
@@ -539,18 +581,18 @@ footer a:hover{color:var(--gold-2)}
       <h2>Many places, <em>one way of working.</em></h2>
       <p>A few of the places that shaped how I work.</p>
     </div>
-    <div class="grid3">
-      <div class="card step"><figure class="spot"><img src="journey-morocco-egypt.jpg" alt="Morocco · Egypt" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-morocco-egypt.jpg</span></figure><h3>Morocco · Egypt</h3><p>Large malls and resorts on tight clocks. Where I learned that the culture on site moves productivity more than any schedule.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-africa.jpg" alt="Remote Africa" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-africa.jpg</span></figure><h3>Remote Africa</h3><p>Bridges and camps at the edge of the map — building where supply chains break and every decision has to hold without you there.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-qatar.jpg" alt="Qatar · UAE" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-qatar.jpg</span></figure><h3>Qatar · UAE</h3><p>Delivering through a blockade. A metro programme that kept moving when the borders around it closed overnight.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-europe.jpg" alt="Italy · Luxembourg · Poland" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-europe.jpg</span></figure><h3>Italy · Luxembourg · Poland</h3><p>Recovery work in Europe — stepping into projects already in trouble and bringing them back to the finish line.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-pipelines.jpg" alt="Saudi Arabia · Denmark" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-pipelines.jpg</span></figure><span class="yr">Pipelines</span><h3>Saudi Arabia · Denmark</h3><p>Cross-border pipelines and energy networks — keeping long, complex programmes on time and on contract.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-africa-network.jpg" alt="Across Africa" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-africa-network.jpg</span></figure><h3>Across Africa</h3><p>Offices, shops and operational real estate set up and run across multiple African markets — on time and below budget.</p></div>
-      <div class="card step more"><figure class="spot"><img src="journey-nigeria.jpg" alt="Nigeria" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-nigeria.jpg</span></figure><h3>Nigeria</h3><p>Ports, power and energy. Big contracts, high stakes — and my deep dive into how procurement makes or breaks a programme.</p></div>
-      <div class="card step more"><figure class="spot"><img src="journey-hotels.jpg" alt="Europe" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-hotels.jpg</span></figure><span class="yr">Real estate &amp; hotels</span><h3>Europe</h3><p>Hotels, residential and mixed-use developments — from bid and negotiation to handover.</p></div>
-      <div class="card step more"><figure class="spot"><img src="journey-retail.jpg" alt="Europe · Africa · Gulf" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-retail.jpg</span></figure><span class="yr">Retail development</span><h3>Europe · Africa · Gulf</h3><p>Shopping centres and retail schemes, from first plan to opening day.</p></div>
+    <div class="grid3" role="region" aria-label="Journey — places I have worked" tabindex="0">
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Morocco / Egypt"><img src="journey-morocco-egypt.jpg" alt="Morocco / Egypt" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Morocco / Egypt</span></figure><h3>Morocco · Egypt</h3><p>Large malls and resorts on tight clocks. Where I learned that the culture on site moves productivity more than any schedule.</p></div>
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Remote Africa"><img src="journey-africa.jpg" alt="Remote Africa" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Remote Africa</span></figure><h3>Remote Africa</h3><p>Bridges and camps at the edge of the map — building where supply chains break and every decision has to hold without you there.</p></div>
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Qatar / UAE"><img src="journey-qatar.jpg" alt="Qatar / UAE" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Qatar / UAE</span></figure><h3>Qatar · UAE</h3><p>Delivering through a blockade. A metro programme that kept moving when the borders around it closed overnight.</p></div>
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Italy / Luxembourg / Poland"><img src="journey-europe.jpg" alt="Italy / Luxembourg / Poland" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Italy / Luxembourg / Poland</span></figure><h3>Italy · Luxembourg · Poland</h3><p>Recovery work in Europe — stepping into projects already in trouble and bringing them back to the finish line.</p></div>
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Saudi Arabia / Denmark"><img src="journey-pipelines.jpg" alt="Saudi Arabia / Denmark" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Saudi Arabia / Denmark</span></figure><span class="yr">Pipelines</span><h3>Saudi Arabia · Denmark</h3><p>Cross-border pipelines and energy networks — keeping long, complex programmes on time and on contract.</p></div>
+      <div class="card step"><figure class="spot journey-panel" role="img" aria-label="Journey: Across Africa"><img src="journey-africa-network.jpg" alt="Across Africa" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Across Africa</span></figure><h3>Across Africa</h3><p>Offices, shops and operational real estate set up and run across multiple African markets — on time and below budget.</p></div>
+      <div class="card step more"><figure class="spot journey-panel" role="img" aria-label="Journey: Nigeria"><img src="journey-nigeria.jpg" alt="Nigeria" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Nigeria</span></figure><h3>Nigeria</h3><p>Ports, power and energy. Big contracts, high stakes — and my deep dive into how procurement makes or breaks a programme.</p></div>
+      <div class="card step more"><figure class="spot journey-panel" role="img" aria-label="Journey: Europe"><img src="journey-hotels.jpg" alt="Europe" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Europe</span></figure><span class="yr">Real estate &amp; hotels</span><h3>Europe</h3><p>Hotels, residential and mixed-use developments — from bid and negotiation to handover.</p></div>
+      <div class="card step more"><figure class="spot journey-panel" role="img" aria-label="Journey: Europe / Africa / Gulf"><img src="journey-retail.jpg" alt="Europe / Africa / Gulf" loading="lazy" onerror="this.remove()"><span class="journey-panel-label">Europe / Africa / Gulf</span></figure><span class="yr">Retail development</span><h3>Europe · Africa · Gulf</h3><p>Shopping centres and retail schemes, from first plan to opening day.</p></div>
     </div>
-    <p class="swipe-hint">Swipe to see more →</p>
+    <div class="jnav" aria-label="Browse the journey"><button type="button" class="jbtn" id="jprev" aria-label="Previous place">←</button><span class="swipe-hint">Swipe or use the arrows</span><button type="button" class="jbtn" id="jnext" aria-label="Next place">→</button></div>
     <div class="more-wrap"><button type="button" class="btn btn-line" id="moreBtn">Three more places →</button></div>
   </div>
 </section>
@@ -587,8 +629,6 @@ footer a:hover{color:var(--gold-2)}
         <li><i>3</i><b>LEAVE IT BETTER.</b> Better contracts, better companies, better communities.</li>
       </ol>
     </div>
-    </div>
-
   </div>
 </section>
 
@@ -624,12 +664,12 @@ footer a:hover{color:var(--gold-2)}
   <div class="wrap">
     <p class="founder-tag">The person behind the projects</p>
     <div class="team">
-      <figure class="spot"><img src="serguei-casual.jpg" alt="Serguei Poppeleer off duty" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · serguei-casual.jpg</span></figure>
+      <figure class="spot"><img src="serguei-casual.jpg" alt="Serguei Poppeleer off duty" loading="lazy" onerror="this.onerror=null;this.src='serguei-portrait.jpeg'"><span class="spot-l">Photo · serguei-portrait.jpeg</span></figure>
       <div>
         <h3>Serguei Poppeleer</h3>
         <p class="role">Engineer · Contracts · Operations</p>
-        <p>French-speaking, at home on a site anywhere in the world. Off duty, I'm writing a book, speaking about what the field taught me, and filming from the air — sites look calmer from a hundred metres up.</p>
-        <p class="creds">MSc Civil Engineering · LLM Construction Law &amp; Arbitration · MBA · MCIArb · WorldCC CCMP · CIOB</p>
+        <p>At home on a site anywhere in the world. Off duty, I'm writing a book, speaking about what the field taught me, and filming from the air — sites look calmer from a hundred metres up.</p>
+        <p class="creds">MSc Civil Engineering · LLM Construction Law &amp; Arbitration · MBA · Member of the Chartered Institute of Arbitrators (MCIArb)</p>
       </div>
     </div>
     <div class="trio">
@@ -649,8 +689,8 @@ footer a:hover{color:var(--gold-2)}
   <div class="wrap">
     <div class="head">
       <span class="pill">Work with me</span>
-      <h2>I bring two. <em>I ask for one.</em></h2>
-      <p>I'm building a network across industries and markets. Every partnership starts with what I put on the table.</p>
+      <h2>What I bring <em>to the table.</em></h2>
+      <p>I'm building a network across industries and markets. My rule: I bring at least two of these — and ask for one thing back.</p>
     </div>
     <div class="why3">
       <div class="card"><div class="ico soft"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/></svg></div><h3>Brand</h3><p>Twenty years of field credibility, the credentials behind it, a book and a stage.</p><span class="sig">Trust that rubs off on what we do together.</span></div>
@@ -678,6 +718,7 @@ footer a:hover{color:var(--gold-2)}
       <h2>A few things <em>people ask.</em></h2>
     </div>
     <div class="faq">
+      <details><summary>Do you take interim roles?</summary><p>Yes — as interim CEO or operations lead for start-ups and new ventures: preparing for investment, getting a product built and delivered, or opening a new market. <a href="#book" style="color:var(--navy);font-weight:700">Tell me about yours →</a></p></details>
       <details><summary>Engineer or lawyer?</summary><p>Engineer first. I studied law, arbitration and business later, because the hardest problems I met on site were written into the contract.</p></details>
       <details><summary>What's the book about?</summary><p><i>No-Surprises Delivery</i> is a field manual for anyone accountable for a project they can't stand on every day — how to keep control from a distance. <a href="book.html" style="color:var(--navy);font-weight:700">Read the preview →</a></p></details>
       <details><summary>Do you speak at events?</summary><p>Yes — on project delivery, cross-border work and what frontier markets teach about systems. Send me a note with the date and audience.</p></details>
@@ -704,7 +745,7 @@ footer a:hover{color:var(--gold-2)}
         <div class="field"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
         <div class="field"><label for="e">Email</label><input id="e" type="email" name="email" required autocomplete="email"></div>
         <div class="field full"><label for="t">About</label>
-          <select id="t" name="topic"><option>Just saying hello</option><option>Speaking invitation</option><option>The book</option><option>Partnership</option><option>An idea or collaboration</option></select></div>
+          <select id="t" name="topic"><option>Just saying hello</option><option>Speaking invitation</option><option>The book</option><option>Interim CEO / operations role</option><option>Partnership</option><option>An idea or collaboration</option></select></div>
         <div class="field full"><label for="m">Message</label><textarea id="m" name="message" required></textarea></div>
       </div>
       <button class="btn btn-navy" type="submit">Send message →</button>
@@ -732,14 +773,16 @@ footer a:hover{color:var(--gold-2)}
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+var jg=document.querySelector('#journey .grid3');function js(d){var c=jg.querySelector('.card');jg.scrollBy({left:d*(c.offsetWidth+14),behavior:'smooth'})}document.getElementById('jprev').onclick=function(){js(-1)};document.getElementById('jnext').onclick=function(){js(1)};
 var mb=document.getElementById('moreBtn');if(mb)mb.onclick=function(){document.getElementById('journey').classList.add('open')};
 document.querySelectorAll('[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('t');if(s)s.value=a.getAttribute('data-topic');});});
 var f=document.getElementById('cf');
 f.addEventListener('submit',function(e){
   e.preventDefault();
+  (function(){var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=true;bt.dataset.t=bt.textContent;bt.textContent='Sending…';}})();
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
     .then(function(r){if(!r.ok)throw new Error(r.status);f.querySelector('.fgrid').style.display='none';f.querySelector('button').style.display='none';document.getElementById('ferr').style.display='none';var o=document.getElementById('ok');o.textContent='Thank you — I\'ll be in touch soon.';o.style.cssText='color:var(--navy);font-weight:700;font-size:1rem'})
-    .catch(function(){document.getElementById('ferr').style.display='block'});
+    .catch(function(){document.getElementById('ferr').style.display='block';var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=false;bt.textContent=bt.dataset.t;}});
 });
 </script>
 </body>
