@@ -5,12 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>No-Surprises Delivery — the book · Serguei Poppeleer</title>
 <meta name="description" content="A field manual for anyone accountable for a project they can't stand on every day. Preview the book and join the waitlist.">
-
+<link rel="canonical" href="https://serguei-poppeleer.netlify.app/book">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A1628">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Serguei Poppeleer">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="No-Surprises Delivery — the book · Serguei Poppeleer">
 <meta property="og:description" content="A field manual for anyone accountable for a project they can't stand on every day. Preview the book and join the waitlist.">
 <meta property="og:url" content="https://serguei-poppeleer.netlify.app/book">
 <meta property="og:image" content="https://serguei-poppeleer.netlify.app/og-book.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="No-Surprises Delivery — book cover by Serguei Poppeleer">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="No-Surprises Delivery — the book · Serguei Poppeleer">
+<meta name="twitter:description" content="A field manual for anyone accountable for a project they can't stand on every day. Preview the book and join the waitlist.">
+<meta name="twitter:image" content="https://serguei-poppeleer.netlify.app/og-book.jpg">
+<meta name="twitter:image:alt" content="No-Surprises Delivery — book cover by Serguei Poppeleer">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -409,6 +421,15 @@ footer a:hover{color:var(--gold-2)}
 .band span{color:rgba(255,255,255,.72);display:block;margin-top:8px}
 @media (max-width:760px){.band{grid-template-columns:1fr;padding:28px}}
 @media (max-width:900px){.cover-wrap img{max-width:340px}}
+.form-err{display:none;color:#C0392B;font-weight:600;text-align:center;margin-top:10px}
+
+/* audit: a11y + robustness */
+:root{--green:#2D6A4F}
+:focus-visible{outline:3px solid #C5A050;outline-offset:4px;border-radius:6px}
+img{max-width:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (max-width:480px){.math-card,.card,.case-l,.case-r{overflow-wrap:anywhere}}
+button[disabled]{opacity:.6;cursor:wait}
 </style>
 </head>
 <body>
@@ -461,7 +482,7 @@ footer a:hover{color:var(--gold-2)}
     <div class="head">
       <span class="pill">Inside the book</span>
       <h2>Five disciplines. <em>One system.</em></h2>
-      <p>Each chapter is one control. Read it, apply it, move to the next. No theory without a tool. No tool without a real-project proof.</p>
+      <p>The Delivery Control System™: each chapter is one discipline. Read it, apply it, move to the next. No theory without a tool. No tool without a real-project proof.</p>
     </div>
     <div class="ch">
       <div class="card"><div class="n">1</div><h3>CONTAIN</h3><div class="sub">Scope control</div><p>Turn fuzzy requirements into one written scope — clear assumptions, acceptance criteria, explicit out-of-scope items.</p><div class="q">Close <em>"was that included?"</em> for good.</div></div>
@@ -519,6 +540,7 @@ footer a:hover{color:var(--gold-2)}
             <select id="br" name="role"><option value="">Choose…</option><option>Project / programme director</option><option>Project manager</option><option>Commercial / contracts manager</option><option>Country / operations lead</option><option>Founder / business owner</option><option>Other</option></select></div>
         </div>
         <button class="btn btn-navy" type="submit">Join the waitlist →</button>
+        <p class="form-err">Sorry — that didn\'t send. Please try again, or email <a href="mailto:hello@contracks.global">hello@contracks.global</a>.</p>
         <p class="form-foot">No spam. You'll hear from me when Chapter 1 is ready — and when the book launches. <a href="/privacy" style="color:var(--navy)">Privacy</a></p>
       </form>
       <div class="okbox" id="bok" hidden><b>You're on the list.</b><p>Chapter 1 — Contain — comes to you the moment it's ready, with early access and reader pricing at launch.</p></div>
@@ -528,9 +550,10 @@ footer a:hover{color:var(--gold-2)}
 <footer><div class="wrap"><div class="fwrap"><div class="flogo"><b>Serguei Poppeleer<span>.</span></b></div><div class="fnav"><a href="/">Profile</a><a href="/links">Links</a><a href="/privacy">Privacy</a></div></div><div class="copy">© <span id="y">2026</span> Serguei Poppeleer</div></div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();function wire(id,okId){var f=document.getElementById(id);if(!f)return;
 f.addEventListener('submit',function(e){e.preventDefault();
-fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-.then(function(){f.hidden=true;document.getElementById(okId).hidden=false;document.getElementById(okId).scrollIntoView({behavior:'smooth',block:'center'})})
-.catch(function(){f.submit()});});
+(function(){var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=true;bt.dataset.t=bt.textContent;bt.textContent='Sending…';}})();
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+.then(function(r){if(!r.ok)throw new Error(r.status);f.hidden=true;document.getElementById(okId).hidden=false;document.getElementById(okId).scrollIntoView({behavior:'smooth',block:'center'})})
+.catch(function(){var e=f.querySelector('.form-err');if(e)e.style.display='block';var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=false;bt.textContent=bt.dataset.t;}});});
 if(location.search.indexOf('ok=1')>-1){f.hidden=true;document.getElementById(okId).hidden=false;}}wire('bf','bok');</script>
 </body>
 </html>
