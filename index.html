@@ -407,6 +407,24 @@ footer a:hover{color:var(--gold-2)}
 .reach a span.c{width:54px;height:54px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 8px 22px rgba(10,22,40,.18);transition:transform .15s}
 .reach a:hover span.c{transform:translateY(-2px)}
 .reach svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media (min-width:901px){#journey .card.more{display:none}#journey.open .card.more{display:block}}
+.more-wrap{text-align:center;margin-top:26px}
+#journey.open .more-wrap{display:none}
+@media (max-width:900px){.more-wrap{display:none}}
+/* now */
+.now{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.now a,.now div.card{text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform .15s,box-shadow .2s}
+.now a:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(10,22,40,.08)}
+.now h3{font-family:'DM Sans',sans-serif;font-size:1.15rem;font-weight:700}
+.now p{color:var(--muted);font-size:.95rem;flex:1}
+.now .go{font-weight:700;color:var(--navy);font-size:.92rem}
+.now .go::after{content:" →";color:var(--gold)}
+.now .soon-t{display:inline-block;align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--gold-soft);border:1px solid var(--gold-line);color:#8A6A1F;padding:4px 10px;border-radius:999px}
+.now .card.dash{border-style:dashed;border-color:var(--gold-line);background:#FBFBFC}
+@media (max-width:1000px){.now{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.now{grid-template-columns:1fr}}
+.form-err{display:none;color:#C0392B;font-weight:600;text-align:center;margin-top:10px}
 </style>
 </head>
 <body>
@@ -418,7 +436,7 @@ footer a:hover{color:var(--gold-2)}
       <a href="#story">Story</a>
       <a href="#journey">Journey</a>
       <a href="#partner">Work with me</a>
-      <a href="#field">Field</a>
+      <a href="#now">Now</a>
       <a href="#faq">About me</a>
     </div>
     <a href="#book" class="btn btn-navy nav-cta"><span class="lg">Say hello</span><span class="sm">Hello</span></a>
@@ -445,7 +463,7 @@ footer a:hover{color:var(--gold-2)}
         <div><strong>20+</strong><span>years</span></div>
         <div><strong>30+</strong><span>countries</span></div>
         <div><strong>4</strong><span>languages</span></div>
-        <div><strong>700</strong><span>on site</span></div>
+        <div><strong>700</strong><span>people on site</span></div>
       </div>
     </div>
   </div>
@@ -467,7 +485,7 @@ footer a:hover{color:var(--gold-2)}
       </div>
       <div class="case-r">
         <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div><div><strong>The operations manager</strong><span>Sites and supply chains, run to one shared way of working.</span></div></div>
-        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div><div><strong>The team builder</strong><span>From 10 engineers to 700 on site — and start-ups built from a blank page.</span></div></div>
+        <div class="kpi"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div><div><strong>The team builder</strong><span>From teams of 10 engineers to 700-person site teams — and start-ups built from a blank page.</span></div></div>
       </div>
     </div>
   </div>
@@ -488,7 +506,7 @@ footer a:hover{color:var(--gold-2)}
           <span class="lang main">MSc Civil Engineering</span>
           <span class="lang main">LLM Construction Law &amp; Arbitration</span>
           <span class="lang main">MBA</span>
-          <span class="lang">MCIArb — Chartered Arbitrator</span>
+          <span class="lang">MCIArb — Member, Chartered Institute of Arbitrators</span>
           <span class="lang">WorldCC CCMP — Contract &amp; Commercial Management</span>
           <span class="lang">CIOB</span>
           <span class="lang">INSEAD</span>
@@ -524,20 +542,38 @@ footer a:hover{color:var(--gold-2)}
     <div class="grid3">
       <div class="card step"><figure class="spot"><img src="journey-morocco-egypt.jpg" alt="Morocco · Egypt" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-morocco-egypt.jpg</span></figure><h3>Morocco · Egypt</h3><p>Large malls and resorts on tight clocks. Where I learned that the culture on site moves productivity more than any schedule.</p></div>
       <div class="card step"><figure class="spot"><img src="journey-africa.jpg" alt="Remote Africa" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-africa.jpg</span></figure><h3>Remote Africa</h3><p>Bridges and camps at the edge of the map — building where supply chains break and every decision has to hold without you there.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-nigeria.jpg" alt="Nigeria" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-nigeria.jpg</span></figure><h3>Nigeria</h3><p>Ports, power and energy. Big contracts, high stakes — and my deep dive into how procurement makes or breaks a programme.</p></div>
       <div class="card step"><figure class="spot"><img src="journey-qatar.jpg" alt="Qatar · UAE" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-qatar.jpg</span></figure><h3>Qatar · UAE</h3><p>Delivering through a blockade. A metro programme that kept moving when the borders around it closed overnight.</p></div>
       <div class="card step"><figure class="spot"><img src="journey-europe.jpg" alt="Italy · Luxembourg · Poland" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-europe.jpg</span></figure><h3>Italy · Luxembourg · Poland</h3><p>Recovery work in Europe — stepping into projects already in trouble and bringing them back to the finish line.</p></div>
       <div class="card step"><figure class="spot"><img src="journey-pipelines.jpg" alt="Saudi Arabia · Denmark" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-pipelines.jpg</span></figure><span class="yr">Pipelines</span><h3>Saudi Arabia · Denmark</h3><p>Cross-border pipelines and energy networks — keeping long, complex programmes on time and on contract.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-hotels.jpg" alt="Europe" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-hotels.jpg</span></figure><span class="yr">Real estate &amp; hotels</span><h3>Europe</h3><p>Hotels, residential and mixed-use developments — from bid and negotiation to handover.</p></div>
-      <div class="card step"><figure class="spot"><img src="journey-retail.jpg" alt="Europe · Africa · Gulf" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-retail.jpg</span></figure><span class="yr">Retail development</span><h3>Europe · Africa · Gulf</h3><p>Shopping centres and retail schemes, from first plan to opening day.</p></div>
       <div class="card step"><figure class="spot"><img src="journey-africa-network.jpg" alt="Across Africa" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-africa-network.jpg</span></figure><h3>Across Africa</h3><p>Offices, shops and operational real estate set up and run across multiple African markets — on time and below budget.</p></div>
+      <div class="card step more"><figure class="spot"><img src="journey-nigeria.jpg" alt="Nigeria" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-nigeria.jpg</span></figure><h3>Nigeria</h3><p>Ports, power and energy. Big contracts, high stakes — and my deep dive into how procurement makes or breaks a programme.</p></div>
+      <div class="card step more"><figure class="spot"><img src="journey-hotels.jpg" alt="Europe" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-hotels.jpg</span></figure><span class="yr">Real estate &amp; hotels</span><h3>Europe</h3><p>Hotels, residential and mixed-use developments — from bid and negotiation to handover.</p></div>
+      <div class="card step more"><figure class="spot"><img src="journey-retail.jpg" alt="Europe · Africa · Gulf" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"><span class="spot-l">Photo · journey-retail.jpg</span></figure><span class="yr">Retail development</span><h3>Europe · Africa · Gulf</h3><p>Shopping centres and retail schemes, from first plan to opening day.</p></div>
     </div>
-    <p class="swipe-hint">Swipe to see all nine →</p>
+    <p class="swipe-hint">Swipe to see more →</p>
+    <div class="more-wrap"><button type="button" class="btn btn-line" id="moreBtn">Three more places →</button></div>
+  </div>
+</section>
+
+<!-- NOW -->
+<section id="now" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="pill">Where it leads</span>
+      <h2>What I'm <em>building now.</em></h2>
+      <p>Twenty years of hard projects, turned into ways to help others deliver theirs.</p>
+    </div>
+    <div class="now">
+      <a class="card" href="https://askcontracks.com" target="_blank" rel="noopener"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div><h3>Ask Contracks</h3><p>A senior contract manager for construction and EPC teams — every week, without the hiring.</p><span class="go">Visit</span></a>
+      <a class="card" href="book.html"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div><h3>No-Surprises Delivery</h3><p>The book: the Delivery Control System™ — five disciplines that keep projects on track.</p><span class="go">Preview the book</span></a>
+      <a class="card" href="speaker.html"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div><h3>Speaking</h3><p>Keynotes, panels and workshops on delivering across borders — in English or French.</p><span class="go">Speaker profile</span></a>
+      <div class="card dash"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></div><h3>Ready to Open</h3><p>Offices, shops and showrooms opened abroad — set up and followed on the ground.</p><span class="soon-t">Coming soon</span></div>
+    </div>
   </div>
 </section>
 
 <!-- 5. BELIEFS -->
-<section id="beliefs" class="alt">
+<section id="beliefs">
   <div class="wrap">
     <div class="head">
       <span class="pill">What I believe</span>
@@ -557,7 +593,7 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- 6. FIELD + LANGUAGES -->
-<section id="field">
+<section id="field" class="alt">
   <div class="wrap">
     <div class="head">
       <span class="pill">From the field</span>
@@ -584,7 +620,7 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- 7. PERSON -->
-<section class="alt">
+<section>
   <div class="wrap">
     <p class="founder-tag">The person behind the projects</p>
     <div class="team">
@@ -609,35 +645,22 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- WORK WITH ME -->
-<section id="partner">
+<section id="partner" class="alt">
   <div class="wrap">
     <div class="head">
       <span class="pill">Work with me</span>
-      <h2>Looking for <em>good people to build with.</em></h2>
-      <p>I'm growing a network across Europe, Africa and the Gulf. If one of these is you, let's talk.</p>
+      <h2>I bring two. <em>I ask for one.</em></h2>
+      <p>I'm building a network across industries and markets. Every partnership starts with what I put on the table.</p>
     </div>
     <div class="why3">
-      <div class="card">
-        <div class="ico soft"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
-        <h3>Specialists</h3>
-        <p>Construction lawyers, quantity surveyors and contract managers who want steady, well-scoped work on international projects.</p>
-        <span class="sig">You get: work passed on to you, a team behind you.</span>
-      </div>
-      <div class="card">
-        <div class="ico soft"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5"/></svg></div>
-        <h3>Firms on the ground</h3>
-        <p>Architects, project managers, fit-out contractors and property agents who deliver locally for companies arriving from abroad.</p>
-        <span class="sig">You get: international clients, briefed and ready.</span>
-      </div>
-      <div class="card">
-        <div class="ico soft"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
-        <h3>Platforms &amp; events</h3>
-        <p>Event organisers, associations and media looking for a speaker, a panelist or a co-host on project delivery and frontier markets.</p>
-        <span class="sig">You get: field-tested content, in English or French.</span>
-      </div>
+      <div class="card"><div class="ico soft"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/></svg></div><h3>Brand</h3><p>Twenty years of field credibility, the credentials behind it, a book and a stage.</p><span class="sig">Trust that rubs off on what we do together.</span></div>
+      <div class="card"><div class="ico soft"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Product</h3><p>AI-assisted contract review, drone surveys and 3D site models, contract management — and free resources to share.</p><span class="sig">Tools that make your offer stronger.</span></div>
+      <div class="card"><div class="ico soft"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Reach</h3><p>A network across infrastructure, energy, real estate, retail and industry — plus introductions and access to investors.</p><span class="sig">Doors opened across borders.</span></div>
     </div>
-    <div class="hero-ctas" style="justify-content:center;margin-top:34px">
-      <a href="#book" class="btn btn-navy" data-topic="Partnership">Start with a 20-minute intro call →</a>
+    <p class="scope">Peers · associations &amp; institutes · media &amp; events · specialists &amp; firms on the ground · investors</p>
+    <div class="hero-ctas" style="justify-content:center;margin-top:28px">
+      <a href="partner.html" class="btn btn-navy">See how we'd work together →</a>
+      <a href="#book" class="btn btn-text" data-topic="Partnership">Or send me a note</a>
     </div>
     <div class="reach">
       <a href="mailto:hello@contracks.global"><span class="c"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>Email</a>
@@ -648,7 +671,7 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- 8. FAQ -->
-<section id="faq" class="alt">
+<section id="faq">
   <div class="wrap">
     <div class="head">
       <span class="pill">About me</span>
@@ -663,7 +686,7 @@ footer a:hover{color:var(--gold-2)}
 </section>
 
 <!-- 9. CONTACT -->
-<section id="book">
+<section id="book" class="alt">
   <div class="wrap book">
     <div>
       <span class="pill">Say hello</span>
@@ -686,6 +709,7 @@ footer a:hover{color:var(--gold-2)}
       </div>
       <button class="btn btn-navy" type="submit">Send message →</button>
       <p class="privacy-note">By sending, you agree to how I use your details — see the <a href="privacy.html">privacy notice</a>.</p>
+      <p class="form-err" id="ferr">Sorry — that didn't send. Please try again, or email <a href="mailto:hello@contracks.global">hello@contracks.global</a>.</p>
       <p class="form-foot" id="ok">I reply personally, usually within two days.</p>
     </form>
   </div>
@@ -695,7 +719,7 @@ footer a:hover{color:var(--gold-2)}
   <div class="wrap">
     <div class="fwrap">
       <div class="flogo"><b>Serguei Poppeleer<span>.</span></b></div>
-      <div class="fnav"><a href="links.html" class="fullsite">My initiatives →</a><a href="#story">Story</a><a href="#journey">Journey</a><a href="#beliefs">Beliefs</a><a href="#partner">Work with me</a><a href="book.html">The book</a><a href="#book">Contact</a><a href="privacy.html">Privacy</a></div>
+      <div class="fnav"><a href="links.html" class="fullsite">My initiatives →</a><a href="#story">Story</a><a href="#journey">Journey</a><a href="#beliefs">Beliefs</a><a href="partner.html">Work with me</a><a href="book.html">The book</a><a href="#book">Contact</a><a href="privacy.html">Privacy</a></div>
     </div>
     <div class="copy">© <span id="y">2026</span> Serguei Poppeleer · Better contracts. Better companies. Better communities.</div>
   </div>
@@ -708,13 +732,14 @@ footer a:hover{color:var(--gold-2)}
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
+var mb=document.getElementById('moreBtn');if(mb)mb.onclick=function(){document.getElementById('journey').classList.add('open')};
 document.querySelectorAll('[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('t');if(s)s.value=a.getAttribute('data-topic');});});
 var f=document.getElementById('cf');
 f.addEventListener('submit',function(e){
   e.preventDefault();
   fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-    .then(function(){f.querySelector('.fgrid').style.display='none';f.querySelector('button').style.display='none';var o=document.getElementById('ok');o.textContent='Thank you — I\'ll be in touch soon.';o.style.cssText='color:var(--navy);font-weight:700;font-size:1rem'})
-    .catch(function(){f.submit()});
+    .then(function(r){if(!r.ok)throw new Error(r.status);f.querySelector('.fgrid').style.display='none';f.querySelector('button').style.display='none';document.getElementById('ferr').style.display='none';var o=document.getElementById('ok');o.textContent='Thank you — I\'ll be in touch soon.';o.style.cssText='color:var(--navy);font-weight:700;font-size:1rem'})
+    .catch(function(){document.getElementById('ferr').style.display='block'});
 });
 </script>
 </body>
