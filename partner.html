@@ -4,13 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Partner with me — Serguei Poppeleer</title>
-<meta name="description" content="I bring two, I ask for one. Brand, tools and reach for partners across industries and markets.">
-
+<meta name="description" content="What I bring to the table: brand, tools and reach for partners across industries and markets.">
+<link rel="canonical" href="https://serguei-poppeleer.netlify.app/partner">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A1628">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Serguei Poppeleer">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Partner with me — Serguei Poppeleer">
-<meta property="og:description" content="I bring two, I ask for one. Brand, tools and reach for partners across industries and markets.">
+<meta property="og:description" content="What I bring to the table: brand, tools and reach for partners across industries and markets.">
 <meta property="og:url" content="https://serguei-poppeleer.netlify.app/partner">
 <meta property="og:image" content="https://serguei-poppeleer.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Serguei Poppeleer — Engineer, Contracts and Operations">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Partner with me — Serguei Poppeleer">
+<meta name="twitter:description" content="What I bring to the table: brand, tools and reach for partners across industries and markets.">
+<meta name="twitter:image" content="https://serguei-poppeleer.netlify.app/og.png">
+<meta name="twitter:image:alt" content="Serguei Poppeleer — Engineer, Contracts and Operations">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -374,6 +386,16 @@ footer a:hover{color:var(--gold-2)}
 .topics li b{display:block;color:var(--navy)}.topics li span{color:var(--muted);font-size:.95rem}
 @media (max-width:760px){footer{padding-bottom:36px}}
 .form-err{display:none;color:#C0392B;font-weight:600;text-align:center;margin-top:10px}
+
+/* audit: a11y + robustness */
+:root{--green:#2D6A4F}
+:focus-visible{outline:3px solid #C5A050;outline-offset:4px;border-radius:6px}
+img{max-width:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (max-width:480px){.math-card,.card,.case-l,.case-r{overflow-wrap:anywhere}}
+button[disabled]{opacity:.6;cursor:wait}
+
+.hero h1{font-size:inherit} .hero h1,.head h1{font-family:'Playfair Display',Georgia,serif;line-height:1.12;letter-spacing:-.01em;color:var(--navy)} .head h1{font-size:clamp(1.9rem,4.4vw,3rem);margin:18px 0 14px}.head h1 em{font-style:normal;color:var(--gold)}
 </style>
 </head>
 <body>
@@ -382,8 +404,8 @@ footer a:hover{color:var(--gold-2)}
   <div class="wrap">
     <div class="head" style="margin-bottom:34px">
       <span class="pill">Partner with me</span>
-      <h2>I bring two. <em>I ask for one.</em></h2>
-      <p>Every partnership starts with what I put on the table — so it's an opportunity, not a favour.</p>
+      <h1>What I bring <em>to the table.</em></h1>
+      <p>My rule: I bring at least two of these — and ask for one thing back. So every partnership is an opportunity, not a favour.</p>
     </div>
     <div class="why3">
       <div class="card"><div class="ico soft"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7z"/></svg></div><h3>Brand · credibility</h3><p>20+ years across 30+ countries. MCIArb, LLM Construction Law &amp; Arbitration, MBA. Author of <i>No-Surprises Delivery</i>. International speaker.</p></div>
@@ -439,9 +461,10 @@ footer a:hover{color:var(--gold-2)}
 <footer><div class="wrap"><div class="fwrap"><div class="flogo"><b>Serguei Poppeleer<span>.</span></b></div><div class="fnav"><a href="/">Profile</a><a href="/links">Links</a><a href="/privacy">Privacy</a></div></div><div class="copy">© <span id="y">2026</span> Serguei Poppeleer</div></div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();function wire(id,okId){var f=document.getElementById(id);if(!f)return;
 f.addEventListener('submit',function(e){e.preventDefault();
-fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+(function(){var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=true;bt.dataset.t=bt.textContent;bt.textContent='Sending…';}})();
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
 .then(function(r){if(!r.ok)throw new Error(r.status);f.hidden=true;document.getElementById(okId).hidden=false;document.getElementById(okId).scrollIntoView({behavior:'smooth',block:'center'})})
-.catch(function(){var e=f.querySelector('.form-err');if(e)e.style.display='block'});});
+.catch(function(){var e=f.querySelector('.form-err');if(e)e.style.display='block';var bt=f.querySelector('button[type=submit]');if(bt){bt.disabled=false;bt.textContent=bt.dataset.t;}});});
 if(location.search.indexOf('ok=1')>-1){f.hidden=true;document.getElementById(okId).hidden=false;}}wire('pf','pok');</script>
 </body>
 </html>
